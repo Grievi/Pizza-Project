@@ -11,3 +11,14 @@
     color: white;
     width: 100%;
 }
+/* #pewaa{
+    padding-top: 10%;
+    padding-bottom: 10%;
+   
+} */
+#contactUs{
+    background: transparent;
+    background-size: cover;
+    /* color: white; */
+    height: 30vh;
+}
