@@ -1,48 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
     <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
+
 <body>
     <div class="container">
         <h1>Place Your Order for your Pizza</h1>
         <div class="row">
-            <div class="col-sm-5">
+            <div class="col-md-5">
                 <form action="">
-                   <label for="Choose your Pizza">Choose Your Pizza</label><br>
-                   <select name="" id="" class="browser-default custom-select custom-select-md mb-3 name">
-                       <option value="bacon pizza">bacon pizza</option>
-                       <option value="Chicken pizza">Chicken pizza</option>
-                       <option value="Sweet Pizza">Sweet Pizza</option>
-                       <option value="Periperi pizza">Periperi pizza</option>
-                   </select><br>
-                   <label for="No of Pizza">No of Pizza</label><br>
-                   
-                       <input type="number" placeholder="no.of pizza oders" max="10" min="1" ><br>
-                   
-                   <label for="select your size">Select your size</label><br>
-                   <select name="" id="">
-                        <option value="Large @ksh.800">Large @ksh.800</option>
-                        <option value="Medium @Ksh.600">Medium @Ksh.600</option>
-                        <option value="Small @ksh.400">Small @ksh.400</option>
-                   </select><br>
-                   <label for="Type of Toppings">Type of Toppings</label>
-                   <select name="" id="">
-                   <label for="Choose your Toppings">Choose your Toppings</label>
-                        <option value="Pepparoni @ksh.150">Pepparoni @ksh.150</option>
-                        <option value="Mushroom @ksh.150">Mushroom @ksh.150</option>
-                        <option value="Cheese @ksh.150">Cheese @ksh.150</option>    
-                   </select>
+                    <label for="Choose your Pizza">Choose Your Pizza</label><br>
+                    <select name="" id="selectPizza" class="browser-default custom-select custom-select-md mb-3 name">
+                        <option value=""></option>
+                        <option class="pizza" id="bacPizza" value="bacon pizza">bacon pizza</option>
+                        <option class="pizza" id="chPizza" value="Chicken pizza">Chicken pizza</option>
+                        <option class="pizza" id="swPizza" value="Sweet Pizza">Sweet Pizza</option>
+                        <option class="pizza" id="perPizza" value="Periperi pizza">Periperi pizza</option>
+                    </select><br>
+                    <label for="No of Pizza">No of Pizza</label><br>
+
+                    <input id="numPizza" type="number" placeholder="no.of pizza oders" max="10" min="1"><br>
+
+                    <label for="select your size">Select your size</label><br>
+                    <select name="" id="size">
+                        <option value=""></option>
+                        <option class="sizeP" value="Large @ksh.800">Large @ksh.800</option>
+                        <option class="sizeP" value="Medium @Ksh.600">Medium @Ksh.600</option>
+                        <option class="sizeP" value="Small @ksh.400">Small @ksh.400</option>
+                    </select><br>
+                    <label for="Type of Toppings">Type of Toppings</label><br>
+                    <select name="" id="">
+                        <label for="Choose your Toppings">Choose your Toppings</label>
+                        <option value=""></option>
+                        <option class="topping" value="Pepparoni @ksh.150">Pepparoni @ksh.150</option>
+                        <option class="topping" value="Mushroom @ksh.150">Mushroom @ksh.150</option>
+                        <option class="topping" value="Cheese @ksh.150">Cheese @ksh.150</option>
+                    </select><br>
+                    <div>
+                       <p>Select your choice of crust @Ksh 200 each</p>
+                       <input class="crust" type="radio" name="crust" value="crispy">
+                       <label for="crispy">Crispy</label><br>
+                       <input class="crust" type="radio" name="crust" value="glutten-free">
+                       <label for="glutten-free">Glutten-free</label><br>
+                       <input class="crust" type="radio" name="crust" value="stuffed">
+                       <label for="stuffed">Stuffed</label><br>
+                    </div>
+                    <div class="py-3">
+                        <button id="btnSubmit" type="submit" class="btn btn-primary">Order</button>
+                        <button id="order2" class="btn btn-primary" type="button">Another Order</button>
+                    </div>
+
                 </form>
+                <div class="col-md-7">
+                    <div id="info">
+                        <p>Thank you for placing your order <br>
+                        You will recieve your take-out soon</p>
+                        <p> For delivery services just place your <br> location and it will be deliverd to you</p>
+                        <button type="button">Delivery</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="./js/script.js"></script>
 </body>
+
 </html>
