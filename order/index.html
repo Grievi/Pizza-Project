@@ -24,7 +24,7 @@
                 <form action="">
                     <label for="Choose your Pizza">Choose Your Pizza</label><br>
                     <select name="" id="selectPizza" class="browser-default custom-select custom-select-md mb-3 name">
-                        <option value=""></option>
+                       
                         <option class="pizza" id="bacPizza" value="bacon pizza">bacon pizza</option>
                         <option class="pizza" id="chPizza" value="Chicken pizza">Chicken pizza</option>
                         <option class="pizza" id="swPizza" value="Sweet Pizza">Sweet Pizza</option>
@@ -36,7 +36,7 @@
 
                     <label for="select your size">Select your size</label><br>
                     <select name="" id="size">
-                        <option value=""></option>
+                        
                         <option class="sizeP" value="Large @ksh.800">Large @ksh.800</option>
                         <option class="sizeP" value="Medium @Ksh.600">Medium @Ksh.600</option>
                         <option class="sizeP" value="Small @ksh.400">Small @ksh.400</option>
@@ -44,7 +44,7 @@
                     <label for="Type of Toppings">Type of Toppings</label><br>
                     <select name="" id="">
                         <label for="Choose your Toppings">Choose your Toppings</label>
-                        <option value=""></option>
+                       
                         <option class="topping" value="Pepparoni @ksh.150">Pepparoni @ksh.150</option>
                         <option class="topping" value="Mushroom @ksh.150">Mushroom @ksh.150</option>
                         <option class="topping" value="Cheese @ksh.150">Cheese @ksh.150</option>
@@ -64,8 +64,13 @@
                     </div>
 
                 </form>
+                <div id="pizzOrder">
+                    <ul class="list-group">
+                        <li id="total"></li>
+                    </ul>
+                </div>
                 <div class="col-md-7">
-                    <div id="info">
+                    <div id="info" style="display: none;">
                         <p>Thank you for placing your order <br>
                         You will recieve your take-out soon</p>
                         <p> For delivery services just place your <br> location and it will be deliverd to you</p>
