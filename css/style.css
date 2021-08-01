@@ -115,9 +115,12 @@ span{
     border: none;
 }
 #contactUs{
-    background:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0,0,0,0.3));
+    background-color:rgba(0, 0, 0, 0.5);
     background: transparent;
     background-size: cover;
+    background-image: url(../Assets/pexels-narda-yescas-1566837\ \(1\).jpg);;
     height: 30vh;
-    
+    color:white ;
+    background-attachment: fixed;
+    font-size: 24px;
 }
