@@ -29,12 +29,14 @@ body{
     cursor: pointer;
     position: relative ;
     overflow: hidden;
+    border: 1px solid #F27405;
 }
 
-/* #btn:hover span{
-    width: 100%;
-
-} */
+#btn1:hover{
+    /* width: 100%; */
+    color: #F27405;
+    background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0,0,0,0.3));
+}
 .lorem{
     font-size: 24px;
 }
