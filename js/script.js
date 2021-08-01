@@ -2,8 +2,24 @@ $(document).ready(function(){
     // alert("ready")
 
 })
-let pizza = document.getElementByClassName("pizza")
-let number = document.getElementsById("numPizza")
+
+// let parallax = document.getElementsById("bana")
+
+// window.addEvent.addEventListener("scroll", function(){
+//  let offset = window.pageYOffset ;
+//  parallax.style.backgroundPositionY = offset*0.7 + "px";
+// })
+
+
+
+
+
+
+
+
+
+let pizza = document.getElementByClassName("pizza");
+let number = document.getElementsById("numPizza");
 let sizePizza = document.getElementsByClassName("size")
 let crust = document.getElementsByClassName("crust")
 let topping = document.getElementsByClassName("topping")

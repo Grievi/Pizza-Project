@@ -18,7 +18,7 @@
 </head>
 <body>
     <header>
-        <div class="banner">
+        <div id="bana" class="banner">
             <div class="container-fluid">
                 <nav style class="navbar navbar-expand-lg navbar-light bg-light ">
                     <div class="container-fluid">
@@ -48,7 +48,7 @@
                 <div class="text-center" style="position: absolute; width: 100%; bottom: 40vh;">
                     <h1>Get Your Pizza Today</h1>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>                   
-                    <a href="#delicacies"><button id="btn1" class="btn btn-secondary" type="button">View our Delicacies</button></a>
+                    <a href="#delicacies"><button id="btn1" class="" type="button"><span></span> View our Delicacies</button></a>
                 </div>
             </div>
         </div>
@@ -57,36 +57,36 @@
     <section>
         <div class="container-fluid">
             <div class="container">
-                <div class="row">
+                <div class="row" style="position: relative;">
                     <div class="text-center"><h1>About US</h1></div>
                     <div class="col-md-5">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum necessitatibus iste doloremque eius similique culpa eveniet ducimus facilis adipisci, fugit sunt provident praesentium rem repudiandae reprehenderit, qui asperiores magni consectetur.</p>
+                        <p id="lorem">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum necessitatibus iste doloremque eius similique culpa eveniet ducimus facilis adipisci, fugit sunt provident praesentium rem repudiandae reprehenderit, qui asperiores magni consectetur.</p>
                     </div>
                     <div class="col-md-7">
-                       <img src="./Assets/about us/pexels-paul-efe-763934.jpg" height="100%" width="100%" alt="our team">
+                       <img class="team" src="./Assets/about us/pexels-paul-efe-763934.jpg" height="100%" width="100%" alt="our team">
                     </div>
                     <div class="text-center mt-3"><h2>Our delicasies</h2></div>
                     <div id="delicacies" class="row">
-                        <div class="col-md-3">
-                            <img class="image" src="./Assets/on the menu images/pexels-brett-jordan-825661.jpg" alt="" height="100%" width="100%">
+                        <div class="col-md-3" >
+                            <img class="image" src="./Assets/on the menu images/pexels-brett-jordan-825661.jpg" alt="">
                             <div class="image-overlay">
                                 <h5>Periperi pizza</h1>
                             </div>                            
                         </div>
                         <div class="col-md-3">
-                            <img class="image" src="./Assets/on the menu images/pexels-daria-shevtsova-1260968.jpg" alt="" height="100%" width="100%">
+                            <img class="image" src="./Assets/on the menu images/pexels-daria-shevtsova-1260968.jpg" alt="" >
                             <div class="image-overlay">
                                 <h5>Chicken pizza</h1>
                             </div>                            
                         </div>
-                        <div class="col-md-3">
-                            <img class="image" src="./Assets/on the menu images/pexels-natasha-filippovskaya-4394612.jpg" alt="" height="100%" width="100%">
+                        <div class="col-md-3" >
+                            <img class="image" src="./Assets/on the menu images/pexels-natasha-filippovskaya-4394612.jpg" alt="" >
                             <div class="image-overlay">
                                 <h5>Bacon pizza</h1>
                             </div>                            
                         </div>
                         <div class="col-md-3">
-                            <img class="image" src="./Assets/on the menu images/pexels-ponyo-sakana-5108601.jpg" alt="" height="100%" width="100%">
+                            <img class="image" src="./Assets/on the menu images/pexels-ponyo-sakana-5108601.jpg" alt="" >
                             <div class="image-overlay">
                                 <h5>Sweet Corn pizza</h1>
                             </div>                            
@@ -96,7 +96,7 @@
             </div>
         </div>
     </section>
-    <section class="pewa">
+    <section class="pewa py-3" style="height:30vh">
         <div id="pewaa" class="text-center">
             <a href="#index.html"><button id="pewa" class="btn btn-secondary mt-3" type="button">Place your Order</button></a>
         </div>
