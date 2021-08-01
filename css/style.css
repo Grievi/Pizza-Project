@@ -2,7 +2,10 @@
     margin: 0;
     padding:0;
     box-sizing: border-box;
+<<<<<<< HEAD
     
+=======
+>>>>>>> gh-pages
 }
 body{
     overflow-x: hidden;
@@ -41,7 +44,6 @@ body{
 }
 
 #btn1:hover{
-    /* width: 100%; */
     color: #F27405;
     background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0,0,0,0.3));
 }
@@ -164,7 +166,9 @@ span{
    padding: 10px;
    border-radius:10px; 
    border:1px solid #F27405;
-   
+
+ 
+
 }
 #back:hover{
     background-color: #F27405;
