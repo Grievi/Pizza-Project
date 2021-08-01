@@ -31,10 +31,10 @@ body{
     overflow: hidden;
 }
 
-#btn:hover span{
+/* #btn:hover span{
     width: 100%;
 
-}
+} */
 .lorem{
     font-size: 24px;
 }
@@ -44,12 +44,12 @@ body{
     box-shadow: 5px rgba(0, 0, 0, 0.5);
 }
 .image{
-    border-radius: 10px;
+    border-radius: 20px;
     display: block;
     height: 100%;
     width: 100%;
     cursor: pointer;
-    padding: 0;
+    padding: 10px;
 }
 .col-md-3{
     position: relative;
@@ -88,7 +88,12 @@ body{
     transform: translateY(0px);
     transition: transform 0.60s;
 }
-
+#bttn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5em;
+}
 #pewa{
     border-radius: 25px;
     padding: 10px;
