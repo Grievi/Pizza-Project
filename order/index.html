@@ -16,72 +16,110 @@
 </head>
 
 <body>
-    <p><a href="../landing.html">Back</a></p>
-    <div class="container">
-        <h1>Place Your Order for your Pizza</h1>
-        <div class="row">
-            <div class="col-md-lg-5">
-                <form action="">
-                    <label for="Choose your Pizza">Choose Your Pizza</label><br>
-                    <select name="" id="selectPizza" class="browser-default custom-select custom-select-md mb-3 name">
-                       
-                        <option class="pizza" id="bacPizza" value="bacon pizza">bacon pizza</option>
-                        <option class="pizza" id="chPizza" value="Chicken pizza">Chicken pizza</option>
-                        <option class="pizza" id="swPizza" value="Sweet Pizza">Sweet Pizza</option>
-                        <option class="pizza" id="perPizza" value="Periperi pizza">Periperi pizza</option>
-                    </select><br>
-                    <label for="No of Pizza">No of Pizza</label><br>
+    <div>
+        <a href="../landing.html"><button>Back</button></a>
+    </div>
+    <div class="container-fluid">
+        <div class="row content bg-dark">
+            <div class="col-sm-4 bg-dark text-center text-white p-sm-0">
+                <form class="was-validation pl-sm-2 bg-primary form">
+                    
+                        <h3 class="display-6 text-center pb-3 bg-danger shadow">Menu</h3>
+                        <ul class="list-group mb-sm-3 pb-2 shadow">
+                            <li class="list-group-item">Peri Peri Pizza</li>
+                            <li class="list-group-item">Bacon Pizza</li>
+                            <li class="list-group-item">Sweet Corn Pizza</li>
+                        </ul>
 
-                    <input id="numPizza" type="number" placeholder="no.of pizza oders" max="10" min="1"><br>
+                        <h3 class="display-7 text-center pb-3 bg-danger">Sizes</h3>
 
-                    <label for="select your size">Select your size</label><br>
-                    <select name="" id="size">
+                        <ul class="list-group mb-sm-3 pb-2 shadow">
+                            <li class="list-group-item">Large(1000/=)</li>
+                            <li class="list-group-item">Medium(800/=)</li>
+                            <li class="list-group-item">Small(400/=)</li>
+                        </ul>
+
+                    <div class="form-row pr-2">
+                      
+                        <input type="text" class='col-sm-7 mb-sm-2 form-control' id="order" name="order" placeholder="Place Your Order Here" required>
+                    </div>
+
+                    <br>
+                    
+                    <div class="form-row pr-2">
+                     
+                        <input type="number" class="col-sm-7 mb-sm-2 form-control" id="price" name="price" required placeholder="Price(e.g KES800)">
+                    </div> 
+
+                    <br>
+
+                    <div class="form-row pr-2 form-group">
+                     
+                        <input type="number" class="col-sm-7 mb-sm-2 form-control" id="quantity" name="quantity" required placeholder="Quantity(e.g 2)">
+
+
+                        <br>
+
+                        <!-- <select class="form-select mb-sm-2" name="size" id="price" required>
+                            <option selected>Size</option>
+                            <option title="large" value="large">1000</option>
+                            <option title="medium" value="medium">800</option>
+                            <option title="small" value="small">400</option>
+                        </select> -->
+
+                        <!-- CRUST TYPE -->
+
+                        <select class="form-select mb-sm-2" name="crust" id="crust-type" required>
+                            <option selected>Crust Type</option>
+                            <option value="crispy">crispy</option>
+                            <option value="stuffed">stuffed</option>
+                            <option value="gluten-free">gluten-free</option>
+                        </select>
+
+                        <!-- TOPPINGS -->
+
+                        <select class="form-select mb-sm-2 toppings" name="toppings" id="toppings" required>
+                            <option selected>Toppings</option>
+                            <option value="pepparoni">pepparoni</option>
+                            <option value="mushrooms">mushrooms</option>
+                            <option value="periperi">periperi</option>
+                            <option value="chicken">chicken</option>
+                            <option value="bacon">bacon</option>
+                        </select>
                         
-                        <option class="sizeP" value="Large @ksh.800">Large @ksh.800</option>
-                        <option class="sizeP" value="Medium @Ksh.600">Medium @Ksh.600</option>
-                        <option class="sizeP" value="Small @ksh.400">Small @ksh.400</option>
-                    </select><br>
-                    <label for="Type of Toppings">Type of Toppings</label><br>
-                    <select name="" id="topping">
-                        <label for="Choose your Toppings">Choose your Toppings</label>
-                       
-                        <option class="topping" value="Pepparoni @ksh.150">Pepparoni @ksh.150</option>
-                        <option class="topping" value="Mushroom @ksh.150">Mushroom @ksh.150</option>
-                        <option class="topping" value="Cheese @ksh.150">Cheese @ksh.150</option>
-                    </select><br>
-                    <div>
-                       <p>Select your choice of crust @Ksh 200 each</p>
-                       <input class="crust" type="radio" name="crust" value="crispy">
-                       <label for="crispy">Crispy</label><br>
-                       <input class="crust" type="radio" name="crust" value="glutten-free">
-                       <label for="glutten-free">Glutten-free</label><br>
-                       <input class="crust" type="radio" name="crust" value="stuffed">
-                       <label for="stuffed">Stuffed</label><br>
                     </div>
-                    <div class="py-3">
-                        <button id="btnSubmit" type="submit" class="btn btn-primary">Order</button>
-                        <button id="order2" class="btn btn-primary" type="button">Another Order</button>
-                    </div>
-
+                    
+                    <br>
+                    
+                        <button type="submit" class="btn btn-outline-danger mb-sm-3" id="add-btn">Add to Cart</button> 
+                        <br>
+                        <br>
+                        <button type="button" class="btn btn-outline-warning mb-sm-3" id="cart">View Cart</button>
+                        <br>
+                        <br>
+                        <button type="button" class="btn btn-outline-success mb-sm-3" id="total-price">View <strong>Total</strong>(Price)</button>
+                    
                 </form>
-                <div id="pizzOrder">
-                    <ul class="list-group">
-                        <li id="total"></li>
-                    </ul>
-                </div>
-                <div class="col-md-7">
-                    <div id="info" style="display: none;">
-                        <p>Thank you for placing your order <br>
-                        You will recieve your take-out soon</p>
-                        <p> For delivery services just place your <br> location and it will be deliverd to you</p>
-                        <button type="button">Delivery</button>
-                    </div>
+
+                <div class="total bg-info hidden" id="total-div">
+                   
                 </div>
             </div>
+    
+            <div class="col-sm-8 container-fluid hidden" id="list">
+                
+            </div>
+        </div>
+
+    </div>
+    
+    <script src="../script.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="./js/script.js"></script>
 </body>
 
 </html>
