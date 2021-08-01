@@ -1,13 +1,12 @@
 let total = 0
-function Order(pizza, number, size, topping, crust){
-    this.pizza = pizza;
-    this.number = number;
+function Order( size, topping, crust){
+    
     this.size = size;
     this.topping = topping;
     this.crust = crust;
     this.cost = 0
 }
-Order.prototype.total = function(){
+Order.prototype.totalAmount = function(){
 
     switch (this.pizza){
         case 'large':
@@ -45,12 +44,20 @@ let total = 0;
 
 $('btnSubmit').click( function(event){
     event.preventDefault();
-    
+    let topping = $("#topping").children("option:selected").val();
+    let size = $("#size").children("option:selected").val();   let piza = $("#selectPizza").children("option:selected").val(); 
 })
 
+var pizza = newPizza(size,topping, crust);
+pizza.totalAmount();
+
+total += pizza.price;
 
 
-
+var order = `<div class="alert alert-secondary" role="alert">
+${pizza.size} ${pizza.topping} with ${pizza.crust} crust
+<span class="float-right font-weight-bold">${pizza.price}/=</span>
+</div>`;
 
 
 
