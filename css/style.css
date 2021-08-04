@@ -174,3 +174,13 @@ span{
 #menu,#sizes{
     background-color:#F27405; ;
 }
+#delivery{
+    background-color: #F27405;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;  
+}
+#delivery:hover{
+    color: #F27405;
+    background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0,0,0,0.3));
+}

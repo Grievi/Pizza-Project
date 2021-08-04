@@ -1,53 +1,54 @@
-const addButton = document.getElementById('add-btn');
-const list = document.getElementById('list');
-const order = document.getElementById('order');
-const priceInput = document.getElementById('price');
-const quantityInput = document.getElementById('quantity');
-const totalPrice = document.getElementById('total-price');
-const cart = document.getElementById('cart');
-const totalDiv = document.getElementById('total-div');
+let list = document.getElementById('list');
+let order = document.getElementById('order');
+let addButton = document.getElementById('add-btn');
+let priceInput = document.getElementById('price');
+let quantityInput = document.getElementById('quantity');
+let totalPrice = document.getElementById('total-price');
+let cart = document.getElementById('cart');
+let totalDiv = document.getElementById('total-div');
 
-const cartList = [];
+let cartList = [];
 let total = 0;
 
-const state = {};
+let state = {};
 
 addButton.addEventListener('click', (e)=> {
     e.preventDefault();
-    const meal = capitalize(order.value);
-    const mealPrice = priceInput.value;
-    const mealQuantity = quantityInput.value;
+    let meal = capitalize(order.value);
+    let mealPrice = priceInput;
+    let mealQuantity = quantityInput.value;
     if(meal !== '' && !cartList.includes(meal)) {
-
         state[`${meal}`] = { 
             price: `${mealPrice}`,
+
             quantity: `${mealQuantity}`
         };
 
         cartList.push(meal);
         
         renderList();
+        
 
         total += parseFloat(mealPrice) * parseInt(mealQuantity);
         order.value = '';
         quantityInput.value = '1';
-        priceInput.value = '';
+        priceInput = '';
         renderTotal();
     }
 });
 
 list.addEventListener('click', (e)=>{
-    const element = e.target;
+    let element = e.target;
     if(element.classList[0] === 'button') {
-        const elementNode = element.parentElement;
-        const elementDataName = element.dataset.name;
+        let elementNode = element.parentElement;
+        let elementDataName = element.dataset.name;
         let elementDataPrice = parseFloat(element.dataset.price);
         let elementDataQuantity = parseInt(element.dataset.quantity);
         total = total - (parseFloat(elementDataPrice) * parseInt(elementDataQuantity));
         elementNode.remove();
         if(cartList.includes(elementDataName))
         {
-            const index = cartList.indexOf(elementDataName);
+            let index = cartList.indexOf(elementDataName);
             cartList.splice(index,1);
             delete state[`${elementDataName}`];
         }
@@ -64,17 +65,16 @@ totalPrice.addEventListener('click', () => {
     
 })
 
-// addButton.addEventListener('click', crustType);
+
 
 cart.addEventListener('click', () => {
     list.classList.toggle('hidden');
 })
 
-const renderList = () => {
+let renderList = () => {
     list.innerHTML = '';
     
-    //console.log(quantityInput.value);
-    // Setting the items in alphabetical order
+
     cartList.sort();
     cartList.forEach((orderedMeal) => {        
 
@@ -88,12 +88,12 @@ const renderList = () => {
 }
 
 
-const crustOptions = document.querySelector('#crust-type');
-const Toppings = document.querySelector('#toppings');
+let crustOptions = document.querySelector('#crust-type');
+let Toppings = document.querySelector('#toppings');
 
-const renderTotal = () => {
+let renderTotal = () => {
   
-    // CRUST TYPE
+  
 
     let crustCost;
     let Toppings = 200;
@@ -114,15 +114,15 @@ const renderTotal = () => {
 
   
 
-    // TOTAL
+
 
     totalDiv.innerHTML = '';
-    //const html = `Total : <span>${total}</span>`;
-    const html = `<p class="display-4">Your total is: <span>KES${total + crustCost + Toppings}</span></p>`;
+ 
+    let html = `<p class="display-4">Your total is: <span>KES${total + crustCost + Toppings}</span></p>`;
     totalDiv.insertAdjacentHTML('afterbegin', html);
 }
 
-const capitalize = (string) => {
+let capitalize = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
