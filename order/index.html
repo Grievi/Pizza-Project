@@ -37,14 +37,25 @@
 
                     <div class="form-row pr-2">
                       
-                        <input type="text" class='col-sm-7 mb-sm-2 form-control' id="order" name="order" placeholder="Place Your Order Here" required>
+                       
+                        <select class="form-select mb-sm-2" name="crust" id="order" required>
+                            <option selected>select your pizza type</option>
+                            <option value="Bacon Pizza">Bacon Pizza</option>
+                            <option value="Peri Peri Pizza">Peri Peri Pizza</option>
+                            <option value="Sweet corn pizza">Sweet corn pizza</option>
+                        </select>
                     </div>
 
                     <br>
                     
                     <div class="form-row pr-2">
                      
-                        <input type="number" class="col-sm-7 mb-sm-2 form-control" id="price" name="price" required placeholder="Price(e.g KES800)">
+                        <select class="form-select mb-sm-2" name="crust" id="price" required>
+                            <option selected>select your size</option>
+                            <option value="large @ksh 1000">large @ksh 1000</option>
+                            <option value="Medium @ ksh 800">Medium @ ksh 800</option>
+                            <option value="Small @ Ksh 400">Small @ Ksh 400</option>
+                        </select>
                     </div> 
 
                     <br>
@@ -55,6 +66,7 @@
 
 
                         <br>
+                      
 
                         <!-- CRUST TYPE -->
 
