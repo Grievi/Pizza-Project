@@ -23,4 +23,4 @@ a little glitch on javascript that makes the page to load slowly but will work o
 Feel free to comment or fork my repository for practice or work, and incase you want to work together mail me @ enogroti@gmail.com
 ### License
 
-Copyright (c) 2021 Pizza Palace
+Copyright (c) 2021 Pizza Palace .resto
